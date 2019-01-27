@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let num;
+        do{
+        num=prompt('Введите число от 0 до 999');
+        }while(isNaN(num));
+        let numBox={
+            units:0,
+                ten:0,
+                    hungrend:0,
+        }
+       if(num<=999 && num>=0){
+        numBox.units = Math.floor(num % 10);
+          numBox.ten = Math.floor(num / 10 % 10);
+          numBox.hungrend = Math.floor(num / 100 % 10);
+       }
+        if(num>999){console.log('Число больше 999!');}
+        console.log(numBox);
+    </script>
+</body>
+</html>
