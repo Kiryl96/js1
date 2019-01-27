@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+       function init()  {
+        let count = 0;
+        let blok,indef=1,number=1;
+      
+        while (count != 64) {
+            blok = document.createElement("div");
+            blok.style.width = '100px';
+            blok.style.height = '100px';
+            blok.style.border = '1px solid black';
+            blok.style.float='left';
+            if(count==0)
+                {
+                blok.innerHTML=number;
+                }
+            if (count % 8 == 0) {
+                blok.style.clear = 'both';
+                blok.innerHTML=number++;
+
+              
+                indef++;
+            }
+            if(indef%2==0 && count%2!=0){
+                blok.style.background='darkgray';
+            }
+            if(indef%2!=0 && count%2==0)
+                {
+                    blok.style.background='darkgray';
+                }
+            switch(count)
+                {
+                    case 0:
+                    blok.innerHTML='1  Л';
+                    break;    
+                    case 1:
+                    blok.innerHTML=' К';
+                    break;
+                    case 2:
+                    blok.innerHTML=' C';
+                    break;
+                    case 3:
+                    blok.innerHTML=' Ф';
+                    break;
+                    case 4:
+                    blok.innerHTML=' Кор';
+                    break;
+                    case 5:
+                    blok.innerHTML=' С';
+                    break;
+                    case 6:
+                    blok.innerHTML=' К';
+                    break;
+                    case 7:
+                    blok.innerHTML=' Л';
+                    break;
+                        case 8:
+                    blok.innerHTML='2 П';
+                    break;
+                        case 7:
+                    blok.innerHTML=' Л';
+                    break;
+                        case 48:
+                    blok.innerHTML='7  П';
+                    break;
+                        case 56:
+                    blok.innerHTML='8 A Л';
+                    break;
+                    case 57:
+                    blok.innerHTML='B К';
+                    break;
+                    case 58:
+                    blok.innerHTML='C C';
+                    break;
+                    case 59:
+                    blok.innerHTML='D Ф';
+                    break;
+                    case 60:
+                    blok.innerHTML='I Кор';
+                    break;
+                    case 61:
+                    blok.innerHTML='F С';
+                    break;
+                    case 62:
+                    blok.innerHTML='G К';
+                    break;
+                    case 63:
+                    blok.innerHTML='H Л';
+                    break; 
+                }
+            if((count>=9 && count<=15) || (count>=49 && count<=55))
+                {
+                    blok.innerHTML=' П';
+                }
+           
+            document.body.appendChild(blok);
+           
+            
+            count++;
+        }
+                     }
+        init();
+        
+    </script>
+</body>
+
+</html>
